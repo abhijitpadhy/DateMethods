@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Method</title>
+    <style>
+        body{
+            background-color: rgb(0, 125, 110);
+            text-align: center;
+            padding: 200px;
+        }
+        .head{
+            position: relative;
+            top: -200px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">DATE-METHODS</h1>
+    <h1 id="res">
+
+    </h1>
+    <button onclick="getDate()">Date</button>
+    <button onclick="Year()">Year</button>
+    <button onclick="Month()">Month</button>
+    <button onclick="Hours()">Hours</button>
+    <button onclick="Minutes()">Minutes</button>
+    <button onclick="Seconds()">Seconds</button>
+    <button onclick="Day()">Day</button>
+    <button onclick="Time()">Time</button>
+    <button onclick="toDate()">dat</button>
+</body>
+<script>
+ var date = new Date();
+ function getDate(){
+    document.getElementById("res").innerText=date;
+ }
+ function Year(){
+    document.getElementById("res").innerText=date.getFullYear();
+ }
+ var month =["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+ function Month(){
+    document.getElementById("res").innerText=month[date.getMonth()];
+ }
+ function Hours(){
+    document.getElementById("res").innerText=date.getHours();
+ }
+ function Minutes(){
+    document.getElementById("res").innerText=date.getMinutes();
+ }
+ function Seconds(){
+    document.getElementById("res").innerText=date.getSeconds();
+ }
+ function Day(){
+    document.getElementById("res").innerText=date.getDay();
+ }
+ function Time(){
+    document.getElementById("res").innerText=date.getTime();
+ }
+ function toDate(){
+    document.getElementById("res").innerText=date.getDate();
+ }
+</script>
+</html>
